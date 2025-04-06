@@ -5,7 +5,7 @@ const models = require('./models/models');
 const cors = require('cors');
 const fileupload = require('express-fileupload');   
 const router = require('./routes/index');
-const errorHandler = require('./middlewares/errorHandlerMiddleware');
+const errorHandler = require('./middleware/ErrorHandlingMiddleware');
 const path = require('path');
 
 const PORT = process.env.PORT || 4001;

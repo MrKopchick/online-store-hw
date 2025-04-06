@@ -1,7 +1,7 @@
 const ApiError = require('../utils/ApiError');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const {User, Basket} = require('../models/index');
+const bcrypt = require('bcrypt');
+const {User, Basket} = require('../models/models');
 
 const generateTokenJWT = (id, email, role) => {
     jwt.sighn({id: id, email, role}, process.env.JWT_SECRET, {expiresIn: '24h'});
